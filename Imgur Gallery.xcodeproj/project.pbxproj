@@ -71,15 +71,15 @@
 		5642728626E2A42600D034C1 /* Imgur Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				5642729526E2A42700D034C1 /* Info.plist */,
+				56DC9E9F26E2E22F000B9560 /* AppKeys.plist */,
+				56DC9EA126E2E277000B9560 /* AppKeys.swift */,
 				564272A226E2B0CD00D034C1 /* Model */,
 				5642729C26E2A4D600D034C1 /* Delegate */,
 				5642729B26E2A4D000D034C1 /* Network */,
 				5642729D26E2A50800D034C1 /* Home */,
-				5642729026E2A42700D034C1 /* Assets.xcassets */,
 				5642729226E2A42700D034C1 /* LaunchScreen.storyboard */,
-				5642729526E2A42700D034C1 /* Info.plist */,
-				56DC9E9F26E2E22F000B9560 /* AppKeys.plist */,
-				56DC9EA126E2E277000B9560 /* AppKeys.swift */,
+				567B405526E4318900E915A8 /* Resources */,
 			);
 			path = "Imgur Gallery";
 			sourceTree = "<group>";
@@ -124,6 +124,14 @@
 				564272A326E2B0DE00D034C1 /* Image.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		567B405526E4318900E915A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5642729026E2A42700D034C1 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6BCBB771F85947A63C875DFF /* Frameworks */ = {
