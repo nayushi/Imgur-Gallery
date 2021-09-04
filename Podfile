@@ -8,6 +8,6 @@ target 'Imgur Gallery' do
   # Pods for Imgur Gallery
 
 pod 'SDWebImage'
-pod 'Alamofire'
+
 
 end
