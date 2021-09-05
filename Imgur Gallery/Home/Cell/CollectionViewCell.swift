@@ -9,7 +9,7 @@ import UIKit
 
 class CustomCell: UICollectionViewCell {
     
-    fileprivate var img: UIImageView = {
+    public var img: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
