@@ -2,7 +2,6 @@
 
 This app uses the Imgur API and loads the most popular posts on the Imgur plataform.
 <br>
-<br>
 
 ## Installation & Setup <img height="20" width="30" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/swift.svg" />
 
