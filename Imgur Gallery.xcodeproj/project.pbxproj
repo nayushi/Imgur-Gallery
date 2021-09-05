@@ -78,7 +78,6 @@
 				5642729C26E2A4D600D034C1 /* Delegate */,
 				5642729B26E2A4D000D034C1 /* Network */,
 				56962FE526E44574001CB333 /* View */,
-				5642729226E2A42700D034C1 /* LaunchScreen.storyboard */,
 				567B405526E4318900E915A8 /* Resources */,
 			);
 			path = "Imgur Gallery";
@@ -122,6 +121,7 @@
 			children = (
 				5642728B26E2A42600D034C1 /* ViewController.swift */,
 				564272A026E2AF0B00D034C1 /* CollectionViewCell.swift */,
+				5642729226E2A42700D034C1 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
