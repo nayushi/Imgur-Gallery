@@ -15,7 +15,8 @@ public enum Result<Value> {
 public class ImagesAPIClient {
     
     // MARK: - Properties
-    private let endpointURL = URL(string: "https://api.imgur.com/3/gallery/hot/viral/0")!
+    var pageURL: Int = 1
+    let endpointURL = URL(string: "https://api.imgur.com/3/gallery/hot/viral/")!
     var linkArray: [String] = []
     private let session: URLSession
     
@@ -36,9 +37,14 @@ public class ImagesAPIClient {
     // MARK: - Methods
     public func fetchImages(completion: @escaping (_ result: Result<[String]>) -> Void) {
         
-        var request = URLRequest(url: endpointURL)
+        let requestURL = URL(string: String(pageURL), relativeTo: endpointURL)!
+        
+        
+        var request = URLRequest(url: requestURL)
         request.setValue("Bearer \(AppKeys.sharedInfo.accessToken)", forHTTPHeaderField: "Authorization")
         let task = session.dataTask(with: request) { data, response, error in
+            
+            print(requestURL.absoluteURL)
             
             if (response as? HTTPURLResponse) != nil {
                 if let data = data, let _ = String(data: data, encoding: .utf8) {
