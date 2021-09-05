@@ -77,7 +77,7 @@
 				564272A226E2B0CD00D034C1 /* Model */,
 				5642729C26E2A4D600D034C1 /* Delegate */,
 				5642729B26E2A4D000D034C1 /* Network */,
-				5642729D26E2A50800D034C1 /* Home */,
+				56962FE526E44574001CB333 /* View */,
 				5642729226E2A42700D034C1 /* LaunchScreen.storyboard */,
 				567B405526E4318900E915A8 /* Resources */,
 			);
@@ -101,23 +101,6 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		5642729D26E2A50800D034C1 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				5642728B26E2A42600D034C1 /* ViewController.swift */,
-				5642729F26E2ADDD00D034C1 /* Cell */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		5642729F26E2ADDD00D034C1 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				564272A026E2AF0B00D034C1 /* CollectionViewCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		564272A226E2B0CD00D034C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +115,15 @@
 				5642729026E2A42700D034C1 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		56962FE526E44574001CB333 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5642728B26E2A42600D034C1 /* ViewController.swift */,
+				564272A026E2AF0B00D034C1 /* CollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6BCBB771F85947A63C875DFF /* Frameworks */ = {
