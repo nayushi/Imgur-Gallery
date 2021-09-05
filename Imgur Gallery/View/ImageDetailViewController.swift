@@ -7,12 +7,11 @@
 
 import UIKit
 import SDWebImage
+import AVKit
 import AVFoundation
 
 class ImageDetailViewController: UIViewController {
     
-  
-
     // MARK: - Properties
     var urlImage = ""
     
@@ -27,8 +26,7 @@ class ImageDetailViewController: UIViewController {
         let imgURL = URL(string: urlImage)
         if let url = imgURL {
             if urlImage.contains(".mp4") {
-                let mp4Image = getThumbnailImage(forUrl: url)
-                someImageView.image = mp4Image
+            playVideo(url: url)
             } else {
                 someImageView.sd_setImage(with: url, completed: nil)
             }
@@ -44,7 +42,7 @@ class ImageDetailViewController: UIViewController {
         theImageView.backgroundColor = .white
         return theImageView
     }()
-    
+
     // MARK: - Functions
     func getThumbnailImage(forUrl url: URL) -> UIImage? {
         let asset: AVAsset = AVAsset(url: url)
@@ -58,6 +56,17 @@ class ImageDetailViewController: UIViewController {
         }
         return nil
     }
+    
+    func playVideo(url: URL){
+        let player = AVPlayer(url: url)
+            let playerController = AVPlayerViewController()
+            playerController.player = player
+            self.addChild(playerController)
+            self.view.addSubview(playerController.view)
+            playerController.view.frame = self.view.frame
+            playerController.view.backgroundColor = .white
+            player.play()
+        }
     
     func someImageViewConstraints() {
         someImageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
