@@ -12,3 +12,12 @@ This app uses the Imgur API and loads the most popular posts on the Imgur plataf
  ```
  ##### 3. Open the *Imgur Gallery.xcworkspace* file on Xcode 
  ##### 4. Run the project on simulator or a real device
+ 
+ 
+ ## Features
+ 
+- [x] Image, video and gif list
+- [x] Infinite scroll
+- [x] See the selected image
+- [x] Watch the selected video
+- [x] Gif support
