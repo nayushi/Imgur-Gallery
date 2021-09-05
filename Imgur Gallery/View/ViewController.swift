@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
     private let apiClient = ImagesAPIClient()
     var images: [String] = []
+    var fetchingMore = false
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -66,16 +67,15 @@ class ViewController: UIViewController {
     
     func loadingImages() {
         let alert = UIAlertController(title: nil, message: "Loading images", preferredStyle: .alert)
-
+        
         let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.style = UIActivityIndicatorView.Style.medium
         loadingIndicator.startAnimating();
-
+        
         alert.view.addSubview(loadingIndicator)
         present(alert, animated: true, completion: nil)
     }
-    
     
     func setupView(){
         view.addSubview(collectionView)
@@ -97,6 +97,7 @@ class ViewController: UIViewController {
                 self.images = path
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
+                    self.fetchingMore = false
                     self.dismiss(animated: false, completion: nil)
                 }
             case .failure(let error):
@@ -104,8 +105,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func beginBatchFetch() {
+        fetchingMore = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            self.apiClient.pageURL += 1
+            self.loadData()
+        })
+    }
 }
-
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -134,5 +142,23 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         return CGSize(width: scaleFactor, height: scaleFactor)
     }
     
-  
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        
+        
+        if offsetY > contentHeight - scrollView.frame.height * 4 {
+            
+            
+            if !fetchingMore {
+                beginBatchFetch()
+            }
+        }
+    }
+    
 }
