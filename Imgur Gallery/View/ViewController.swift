@@ -45,6 +45,7 @@ class ViewController: UIViewController {
         return cv
     }()
     
+    // MARK: - Functions
     func getThumbnailImage(forUrl url: URL) -> UIImage? {
         let asset: AVAsset = AVAsset(url: url)
         let imageGenerator = AVAssetImageGenerator(asset: asset)
@@ -143,22 +144,19 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        
+        let id = images[indexPath.item]
+        let vc = ImageDetailViewController()
+        vc.urlImage = id
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
-        
-        
         if offsetY > contentHeight - scrollView.frame.height * 4 {
-            
-            
             if !fetchingMore {
                 beginBatchFetch()
             }
         }
     }
-    
 }

@@ -16,6 +16,7 @@
 		564272A126E2AF0B00D034C1 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564272A026E2AF0B00D034C1 /* CollectionViewCell.swift */; };
 		564272A426E2B0DE00D034C1 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564272A326E2B0DE00D034C1 /* Image.swift */; };
 		564272A626E2B6C200D034C1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564272A526E2B6C200D034C1 /* API.swift */; };
+		56962FE826E46D36001CB333 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56962FE726E46D36001CB333 /* ImageDetailViewController.swift */; };
 		56DC9EA026E2E230000B9560 /* AppKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56DC9E9F26E2E22F000B9560 /* AppKeys.plist */; };
 		56DC9EA226E2E277000B9560 /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DC9EA126E2E277000B9560 /* AppKeys.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		564272A026E2AF0B00D034C1 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		564272A326E2B0DE00D034C1 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		564272A526E2B6C200D034C1 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		56962FE726E46D36001CB333 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
 		56DC9E9F26E2E22F000B9560 /* AppKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppKeys.plist; sourceTree = "<group>"; };
 		56DC9EA126E2E277000B9560 /* AppKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeys.swift; sourceTree = "<group>"; };
 		741AA0EA4A6E200D1EB91C23 /* Pods_Imgur_Gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Imgur_Gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +124,7 @@
 				5642728B26E2A42600D034C1 /* ViewController.swift */,
 				564272A026E2AF0B00D034C1 /* CollectionViewCell.swift */,
 				5642729226E2A42700D034C1 /* LaunchScreen.storyboard */,
+				56962FE726E46D36001CB333 /* ImageDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				5642728A26E2A42600D034C1 /* SceneDelegate.swift in Sources */,
 				564272A626E2B6C200D034C1 /* API.swift in Sources */,
 				564272A426E2B0DE00D034C1 /* Image.swift in Sources */,
+				56962FE826E46D36001CB333 /* ImageDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

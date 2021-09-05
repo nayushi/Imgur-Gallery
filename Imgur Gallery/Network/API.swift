@@ -43,9 +43,6 @@ public class ImagesAPIClient {
         var request = URLRequest(url: requestURL)
         request.setValue("Bearer \(AppKeys.sharedInfo.accessToken)", forHTTPHeaderField: "Authorization")
         let task = session.dataTask(with: request) { data, response, error in
-            
-            print(requestURL.absoluteURL)
-            
             if (response as? HTTPURLResponse) != nil {
                 if let data = data, let _ = String(data: data, encoding: .utf8) {
                     do {
